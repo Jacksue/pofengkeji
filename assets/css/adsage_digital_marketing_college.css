@@ -1,0 +1,150 @@
+
+
+.college-b1 {
+    background: #121212 url(../images/edu_01.png) no-repeat top center;
+    background-size: cover;
+    height: 806px;
+}
+.college-b1-text {
+    width: 100%;
+    float:left;
+    margin-top: 274px;
+    color:#fff;
+    text-align: center;
+    padding: 82px 0;
+    position: relative;
+}
+.college-b1-text:after {
+   content: '';
+   position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    transform: translate3d(-50%,0,0);
+}
+.college-b1-text:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    transform: translate3d(-50%,0,0);
+}
+.college-b1-text h1 {
+    font-size: 55px;
+    font-weight: normal;
+}
+.college-b1-text p {
+    font-size: 20px;
+    text-transform:uppercase;
+}
+
+.college-02 {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.college-02 p {
+    font-size: 20px;
+    color:#000000;
+    line-height: 40px;
+}
+.college-02 img {
+    max-width: 100%;
+
+}
+.college-item img {
+    max-width: 100%;
+    display: inline-block;
+}
+.college-child-item-img {
+    height: 169px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.college-item {
+    padding-top: 86px;
+    padding-bottom: 86px;
+    border-top: 1px solid #e7e7e7;
+}
+.college-item-title {
+    font-size: 42px;
+    color:#414141;
+    text-align: center;
+    margin-bottom: 120px;
+}
+.college-child-item {
+    text-align: center;
+}
+.college-child-item-text h4{
+    font-size: 30px;
+    color:#414141;
+    font-weight: normal;
+    padding-top: 40px;
+}
+
+.college-download-list .row {
+    margin-bottom: 80px;
+}
+.college-download-list-item a {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.college-desc-wrap {
+    position: relative;
+    padding-left: 25%;
+    padding-top: 70px;
+    padding-right:5%;
+    box-sizing: border-box;
+}
+.college-desc-wrap h3 {
+    font-size: 26px;
+    color:#414141;
+    padding-bottom: 32px;
+    border-bottom:1px solid rgba(135,135,135,0.2);
+    margin-bottom: 58px;
+    position: relative;
+}
+.college-desc-wrap  h3 span {
+    color:#c5c5c5;
+    font-size: 50px;
+    position: absolute;
+    left: -100px;
+    top:-10px;
+}
+.college-desc-wrap h3:after {
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -1px;
+    width: 90px;
+    height: 1px;
+    background-color: #1885fb;
+    display: block;
+}
+.college-desc-wrap ul li {
+    color:#000000;
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+.college-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+}
+
+.college-img-wrap00 {
+    background-color: #f5f5f5;
+}
+.college-img-wrap01 {
+    background: linear-gradient(45deg, #8f89ff , #1785fb);
+}

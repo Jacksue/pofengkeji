@@ -1,0 +1,13 @@
+.product-head {
+    text-align: center;
+}
+.product-head img {
+    display: inline-block;
+}
+.product-head p {
+    font-size: 41px;
+    color:#414141;
+}
+.service-img-wrap01 {
+    background: #f5f5f5;
+}

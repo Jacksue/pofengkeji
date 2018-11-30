@@ -1,0 +1,577 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>破峰 案例</title>
+
+    <!--<link rel="stylesheet" media="all" href="assets/css/style.css" />-->
+    <link rel="stylesheet" media="all" href="assets/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" media="all" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/common.css" />
+    <link rel="stylesheet" media="all" href="assets/css/header.css" />
+    <link rel="stylesheet" media="all" href="assets/css/footer.css" />
+    <link rel="stylesheet" media="all" href="assets/css/case.css" />
+    <link rel="stylesheet" media="all" href="assets/css/case_detail.css" />
+
+
+    <script src="assets/scripts/vue.js"></script>
+    <script src="assets/scripts/vue-router.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b27328a9ee963940b6f10001d6c2a36e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+
+<body >
+<div id="app">
+
+    <div class="container-fluid fixed-top">
+
+        <div class="row  header">
+            <div class="col-sm-2 col-3 d-flex justalign-center">
+                <img src="assets/images/logo.png" class="logo max-width-100" />
+            </div>
+
+            <div class="col-5 offset-4 col-sm-6 offset-sm-4">
+
+
+                <ul class="top-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="service.html">服务</a></li>
+                    <li><a href="case.html">案例</a>
+                        <ul class="top-nav-submenu">
+                            <li v-for="(value,key) in category" :key="key">
+                                <router-link :to="{name:'category',params:{cid:key}}">{{value}}</router-link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="" onclick="dd()" >工具</a></li>
+                    <li><a href="http://www.pofengkeji.com/get/" target="_blank">干货</a></li>
+                </ul>
+
+                <div class="mobile-menu">
+
+                    <a href="#" class="mobile-menu-btn "><img src="assets/images/menu.png" /> </a>
+                    <ul class="mobile-top-nav animated">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="service.html">服务</a></li>
+                        <li><a href="case.html">案例</a></li>
+                        <li><a href="" onclick="dd()" >工具</a></li>
+                        <li><a href="http://www.pofengkeji.com/get/" target="_blank">干货</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <router-view></router-view>
+
+    <div class="index-10 section-10 page-node" style="height: 346px;">
+
+        <div class="layout-center"><div class="layout-center-inner">
+
+
+            <div class="footer"><div class="links">
+
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 col-6">
+                            <div class="links-col">
+                                <div class="links-col-inner">
+
+                                    <ul>
+                                        <li><h5>关于我们</h5></li>
+                                        <li><a href="about/about_1.html">公司简介</a></li>
+                                        <li><a href="about/about_7.html">公司大事记</a></li>
+                                        <!--<li><a href="index.html">所获荣誉</a></li>-->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <div class="links-col">
+                                <div class="links-col-inner">
+                                    <ul>
+                                        <li><h5>业务范畴</h5></li>
+                                        <li><a href="service.html#sem">SEM</a></li>
+                                        <li><a href="service.html#seo">SEO</a></li>
+                                        <li><a href="service.html#xi">信息流</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <div class="links-col">
+                                <div class="links-col-inner">
+                                    <ul>
+                                        <li><h5>案例</h5></li>
+                                        <li><a href="./case.html#/1">商务服务</a></li>
+                                        <li><a href="./case.html#/2">传统行业</a></li>
+                                        <li><a href="./case.html#/3">招商加盟</a></li>
+                                        <li><a href="./case.html#/4">金融</a></li>
+                                        <li><a href="./case.html#/5">装修</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <div class="links-col">
+                                <div class="links-col-inner">
+                                    <ul>
+                                        <li><h5>破峰干货精选</h5></li>
+                                        <li><a href="" onclick="dd()">行业精选</a></li>
+                                        <!--<li class="clear-mb"><h5>新闻动态</h5></li>-->
+                                        <li><a href="" onclick="dd()">新闻动态</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <div class="links-col">
+                                <div class="links-col-inner">
+                                    <ul>
+                                        <li><h5>加入我们</h5></li>
+                                        <li><a href="joinus/joinus_10.html">人才招聘</a></li>
+                                        <li><a href="about/about_9.html">联系我们</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <div class="links-col clear-br guanzhu">
+                                <div class="links-col-inner ewm">
+                                    <h5>关注我们</h5>
+                                    <img src="assets/images/ewm1.jpg">
+                                    <span>破峰科技官方微信</span>
+                                    <img src="assets/images/ewm2.png">
+                                    <span>破峰科技官方微博</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+                <div class="info">
+                    <p>粤ICP备18076781号&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br><a href="#">隐私声明</a> </p>
+                </div></div>
+
+
+        </div></div>
+
+    </div>
+
+
+</div>
+
+<script type="text/x-template" id="categoryTemplate">
+    <div>
+
+
+        <div class="case-b1 page-node ">
+
+        </div>
+
+
+        <div class="container-fluid case-02 ">
+
+            <div class="row ">
+                <div class="col-sm-12 col-md-6 offset-md-1">
+                    <h1>{{showcategory}}</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container case-list">
+
+            <div class="row ">
+                <div class="col-md-12">
+
+                    <div class="row">
+
+                        <div class="col-md-3" v-for="(item,index) in getCaseList" :key="index">
+                            <div class="case-list-item">
+                                <router-link tag="a" :to="{name:'detail',params:{id:item.id}}" >
+                                    <div class="case-list-item-img">
+                                        <img :src="item.simg" />
+                                    </div>
+                                    <div class="case-list-item-text">
+                                        <h3>{{item.name}}</h3>
+                                    </div>
+                                </router-link>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+</script>
+<script type="text/x-template" id="detailTemplate">
+    <div class="container case-detail">
+        <style>
+
+        </style>
+        <div class="row ">
+            <div class="col-md-9">
+                <div class="case-detail-img">
+                    <img :src="getCase.img" />
+                </div>
+
+                <div class="case-detail-qudao">
+                    <h4>投放渠道</h4>
+                    <ul>
+                        <li v-for="(item,index) in getCase.qd" :key="index">
+                            <img :src="qdlist[item]" v-if="qdlist[item]" /> <br/>{{item}}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="case-detail-item">
+                    <h4>投放周期</h4>
+                    <p class="p">{{getCase.zq}}</p>
+                </div>
+
+                <div class="case-detail-item">
+                    <h4>投放目标</h4>
+                    <p class="p">{{getCase.mb}}</p>
+                </div>
+
+                <div class="case-detail-item">
+                    <h4>投放详情</h4>
+                    <div class="p" v-html="getCase.xq">
+                    </div>
+                    <div class="case-detail-item-images">
+                        <img :src="item" v-for="(item,index) in getCase.tp" :key="index" />
+                    </div>
+                </div>
+
+
+                <div class="case-detail-morecase">
+                    <h4>更多案例</h4>
+                    <div class="row">
+
+                        <div class="col-md-3" v-for="(item,index) in moreCase">
+                            <div class="case-list-item">
+                                <router-link tag="a" :to="{name:'detail',params:{id:item.id}}">
+                                    <div class="case-list-item-img">
+                                        <img :src="item.simg" />
+                                    </div>
+                                    <div class="case-list-item-text">
+                                        <h5>{{item.name}}</h5>
+                                    </div>
+                                </router-link>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+
+                <ul class="case-category">
+                    <li v-for="(value,key) in category" @click="categoryShowId = key">
+                        <span>{{value}}</span>
+                        <ul v-if="key == categoryShowId">
+                            <li v-for="(item,index) in getWithCid(key)">
+                                <router-link :to="{name:'detail',params:{id:item.id}}">{{item.name}}</router-link>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</script>
+
+<script src="assets/scripts/jquery.min.js"></script>
+<script src="assets/scripts/common.js"></script>
+<script>
+    Vue.use(VueRouter)
+    var categoryList = {
+        '1': '商务服务',
+        '2': '传统行业',
+        '3': '招商加盟',
+        '4': '金融',
+        '5': '装修',
+    }
+    var caseList = [
+        {id:1,name:'约约出行',simg:'assets/images/index_service_01/pp_case_05.png',img:'assets/images/tt/06.jpg',cid:1,qd:['百度'],zq:'2018.1  —— 至今',mb:'降低咨询成本，提高有效咨询。',tp:['assets/images/detial/01_1.jpg','assets/images/detial/01_2.jpg'],xq:'从18年开始接受约约出行在百度渠道投放，针对客户相对苛刻的成本要求，我们成功完成50%的降本目标，提升30%转化率'},
+        {id:2,name:'欢雀小保',simg:'assets/images/index_service_01/pp_case_01.png',img:'assets/images/tt/06.jpg',cid:1,qd:['百度'],zq:'2018.4  —— 至今',mb:'降低咨询成本，提高有效咨询。',xq:'关键词优化拓展，重新梳理账户结构，分设备建立专项账户计划；<br/>以提量控本为核心，在控制成本的同时，不断实现量级的有效化。'},
+        {id:3,name:'社保云',simg:'assets/images/index_service_01/pp_case_02.png',img:'assets/images/tt/06.jpg',cid:1,qd:['百度'],zq:'2017.4 —— 2018.1',mb:'降低咨询成本，提高有效咨询。',xq:'2017年4月与破峰科技合作以来，百度渠道投放为主，消耗占比高达70%以上，完件成本和授信成本均在客户考核指标范围内，得到客户的高度认可。'},
+        {id:4,name:'高航网',simg:'assets/images/index_service_01/service_04.png',img:'assets/images/tt/06.jpg',cid:1,qd:['百度'],zq:'2017.2 —— 2017.6',mb:'降低咨询成本，提高有效咨询。',tp:['assets/images/detial/04_1.jpg'],xq:'账户梳理，精准投放，现阶段以降低成本为主，去除业务不相关关键词，降低相关性差关键词预算，重点投放投资理财软件等关键词，降低无效点击，提升转化率。<br/>持续梳理账户关键词，根据分关键字消费/订单及订单成本，优化关键词出价/匹配模式，并定期增加相关词，添加否词等。'},
+        {id:5,name:'中大管理咨询',simg:'assets/images/index_service_01/case05.png',img:'assets/images/tt/06.jpg',cid:1,qd:['百度'],zq:'2018.4 —— 至今',mb:'降低咨询成本，提高有效咨询',xq:'去除无效关键词，不断测试落地页效果，精准分类关键词，在一个月内降低60%成本，提升了40%转化率，客户对此很满意'},
+
+
+
+        {id:101,name:'旭众机械',simg:'assets/images/index_service_01/jy_case_01.png',img:'assets/images/tt/06.jpg',cid:2,qd:['百度'],zq:'2018',mb:'降低点击成本，屏蔽恶意点击，提升询盘量',tp:['assets/images/detial/06_1.jpg','assets/images/detial/06_2.jpg'],xq:'旭众机械推广账户存在业务覆盖不全，关键词少，推广消费有限，订单转化较少等缺点，我们通过优化投放账户及LandingPage，应用不同投放策略之后实现了转化率超过3倍的增长，和订单金额460%增长'},
+        {id:102,name:'汉为幕墙',simg:'assets/images/index_service_01/jy_case_02.png',img:'assets/images/tt/06.jpg',cid:2,qd:['百度'],zq:'2018.5 —— 至今',mb:'降低点击成本，屏蔽恶意点击，提升询盘量',tp:['assets/images/detial/07_1.jpg','assets/images/detial/07_2.jpg'],xq:'与汉为幕墙各部门配合投放相对应的课程，需要代理商不断优化关键词及创意，达到咨询数翻倍增长'},
+        {id:103,name:'广州中航',simg:'assets/images/index_service_01/jy_case_03.png',img:'assets/images/tt/06.jpg',cid:2,qd:['百度'],zq:'2017.3-至今',mb:'降低点击成本，屏蔽恶意点击，提升询盘量',tp:['assets/images/detial/08_1.jpg','assets/images/detial/08_2.jpg'],xq:'①改善交互方式；②新增产品线；③加投放潜在用户；'},
+        {id:104,name:'广州浙杭叉车',simg:'assets/images/index_service_01/jy_case_04.png',img:'assets/images/tt/06.jpg',cid:2,qd:['百度'],zq:'2017年3月-至今',mb:'降低点击成本，屏蔽恶意点击，提升询盘量',tp:['assets/images/detial/09_1.jpg','assets/images/detial/09_2.jpg'],xq:'①改善交互方式；②新增产品线；③加投放潜在用户；'},
+        {id:105,name:'明煌保温工程',simg:'assets/images/index_service_01/jy_case_05.png',img:'assets/images/tt/06.jpg',cid:2,qd:['百度'],zq:'2016年1月-2016年8月',mb:'降低点击成本，屏蔽恶意点击，提升询盘量',xq:'对各个工程进行投放策略分析，按各个计划，在控本的同时不断提升转化'},
+
+
+        {id:201,name:'红鼎游戏',simg:'assets/images/index_service_01/case01.png',img:'assets/images/tt/06.jpg',cid:3,qd:['百度'],zq:'2018.6——至今',mb:'降低棋牌游戏加盟咨询成本，提升资源有效占比。',tp:['assets/images/detial/11_1.jpg'],xq:'从18年6月开始接受红鼎力游戏在百度渠道投放，针对客户相对苛刻的成本要求以及百度对棋牌游戏相关政策收紧的情况下，我们超额完成降成本目标，咨询成本降低60%以上，有效资源成本降低45%以上。'},
+        {id:202,name:'凯茜贝尔',simg:'assets/images/index_service_01/case02.png',img:'assets/images/tt/06.jpg',cid:3,qd:['百度'],zq:'2018.6——至今',mb:'降低咨询微商加盟咨询成本，屏蔽“小学生”群体，提高有效资源占比。',tp:['assets/images/detial/25_1.png','assets/images/detial/25_2.png'],xq:'关键词优化拓展，重新梳理账户结构，细分关键词，并针对重点计划设计高级样式配图，CTR提升37.5%，ACP降低43.3%，最终成本降低39.85%，有效资源占比提升17.9%。总体以提量控本为核心，在控制成本的同时，不断实现有效咨询量的提升。'},
+        {id:203,name:'梵美诗',simg:'assets/images/index_service_01/case03.png',img:'assets/images/tt/06.jpg',cid:3,qd:['百度'],zq:'2016.7——2016.12',mb:'降低咨询成本，提升有效咨询占比',tp:['assets/images/detial/13_1.jpg','assets/images/detial/13_2.jpg'],xq:'1）关键词优化；2）利用品牌活动拓展流量；3）LP优化<br/>新客与订单金额稳固增长，2016年7-10月与2016年5-7月相比同比增长超50%。'},
+        {id:204,name:'水手宝宝',simg:'assets/images/index_service_01/case04.png',img:'assets/images/tt/06.jpg',cid:3,qd:['百度'],zq:'2016.7——2016.12',mb:'降低咨询成本，提升有效咨询占比',tp:['assets/images/detial/14_1.jpg','assets/images/detial/14_2.jpg'],xq:'定制投放策略，对账户进行优化，实时数据监控，定期汇报'},
+
+
+        {id:301,name:'柚贷网',simg:'assets/images/index_service_01/ds_case_05.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度'],zq:'2017.1——2017.9',mb:'咨询量提升',tp:['assets/images/detial/15_1.jpg','assets/images/detial/15_2.jpg'],xq:'通过百度搜索全地区覆盖投放，并通过专门优化，使总体成本下降18%,咨询提升35%。'},
+        {id:302,name:'助贷网',simg:'assets/images/index_service_01/ds_case_01.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度'],zq:'2016.5.1-至今',mb:'Leads收集',tp:['assets/images/detial/16_1.jpg','assets/images/detial/16_2.jpg'],xq:'分析产品计划，重新编写关键词，添加更创意，成本较16年下降19%'},
+        {id:303,name:'友金所',simg:'assets/images/index_service_01/ds_case_03.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度'],zq:'2017.1.1至今',mb:'提升订单',tp:['assets/images/detial/17_1.jpg','assets/images/detial/17_2.jpg'],xq:'分析订单人群，选择投放区域与投放时间，反复测试创意，对比前三个月订单量成功上升40%'},
+        {id:304,name:'中领财富',simg:'assets/images/index_service_01/ds_case_04.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度搜索'],zq:'2018.1——2018.7',mb:'提升品牌曝光，促进广告点击',tp:['assets/images/detial/18_1.jpg'],xq:'于2018年1月起服务中领财富，执行百度渠道投放，并开发品专、无线品专及活动期间时效品专投放，为奢侈品客户带来236%展现增长，服务期间点击上升10倍，CTR增长266%'},
+        {id:305,name:'中方信富',simg:'assets/images/index_service_01/pp_case_03.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度搜索'],zq:'2016.4-2016.10',mb:'提升品牌曝光，及流量导入',tp:['assets/images/detial/19_1.jpg','assets/images/detial/19_2.jpg'],xq:'在2016年8月-10月的百度投放中，品牌整体曝光量呈稳步上升态势；展现量与点击量的爆发期始于9月前后，借助大量学生人群，我们很好的获得了品牌曝光及可观流量。'},
+        {id:306,name:'中投证券',simg:'assets/images/index_service_01/pp_case_04.png',img:'assets/images/tt/06.jpg',cid:4,qd:['百度SEM'],zq:'2017至今',mb:'意向购买用户线索',tp:['assets/images/detial/20_1.jpg','assets/images/detial/20_2.jpg'],xq:'分时进行搜索SEM投放'},
+
+
+
+        {id:401,name:'泥巴公社',simg:'assets/images/index_service_01/yx_case_01.png',img:'assets/images/tt/06.jpg',cid:5,qd:['百度SEM'],zq:'2016.12——2017.10',mb:'提升咨询量，降低咨询成本',xq:'经过竞价托管人员一系列的优化改进，较终实现较后（提高咨询量、降低咨询成本）效果上的提升。'},
+        {id:402,name:'苹果装饰',simg:'assets/images/index_service_01/yx_case_02.png',img:'assets/images/tt/06.jpg',cid:5,qd:['百度SEM'],zq:'2017年-至今',mb:'提升咨询量，降低咨询成本',xq:'确定需要家饰装修用户标签，以产品物美价廉为素材测试方向，保留高点击创意并进行分阶段投放，创意元素进行轮替测试，保持素材新鲜度。'},
+        {id:403,name:'柠檬树装饰',simg:'assets/images/index_service_01/yx_case_03.png',img:'assets/images/tt/06.jpg',cid:5,qd:['百度SEM'],zq:'2017.4——2018.1',mb:'提升咨询量，降低咨询成本',xq:'什么位置的排名才是投资回报率高的排名，什么样的关键词出价才是合理的出价，破峰科技用一套科学的评估方法帮助企业进行区别化出价与差异化排名。'},
+        {id:404,name:'名杰装饰',simg:'assets/images/index_service_01/yx_case_04.png',img:'assets/images/tt/06.jpg',cid:5,qd:['百度SEM'],zq:'2016.8-2017.1',mb:'提升质量度得分，降低点击价格',xq:'用比同行更低的价格获得优质的客户，是每一个企业开展百度付费推广的理想状态，破峰科技通过帮助企业提高关键词质量度得分，从而降低平均点击价格。'},
+    ]
+    var categoryPage = {
+        template: '#categoryTemplate',
+        data: function(){
+            return {
+                cid: 2,
+                category: categoryList,
+                cases: caseList
+            }
+        },
+        beforeRouteEnter:function (to, from, next) {
+            document.body.scrollTop = 0
+            next()
+        },
+        beforeRouteUpdate :function (to, from, next) {
+            document.body.scrollTop = 0
+            next()
+        },
+        watch:{
+            'route':function(){
+                document.body.scrollTop = 0
+            }
+        },
+        computed: {
+            showcategory:function(){
+                return this.getShowCategory
+            },
+            getShowCategory:function(){
+                return (this.$route.params.cid)?this.category[this.$route.params.cid]:'全部案例'
+            },
+            getCaseList:function(){
+                if(this.$route.params.cid) {
+                    var r = []
+                    for(var i=0; i<this.cases.length; i++) {
+                        if(this.cases[i]['cid'] == this.$route.params.cid) r.push(this.cases[i])
+                    }
+                    return r
+                } else {
+                    return this.cases
+                }
+
+            }
+        },
+        created: function(){
+
+        },
+        mounted: function(){
+            $(".top-nav").removeClass('top-nav-black')
+            document.title = this.getShowCategory + ' 破峰 案例'
+        },
+        updated:function(){
+            document.title = this.getShowCategory + ' 破峰 案例'
+        }
+    }
+
+    var detailPage = {
+        template: '#detailTemplate',
+        beforeRouteEnter:function (to, from, next) {
+            document.body.scrollTop = 0
+            next()
+        },
+        beforeRouteUpdate :function (to, from, next) {
+            document.body.scrollTop = 0
+            next()
+        },
+        updated:function(){
+            document.title = this.getCase.name + ' 破峰 案例'
+        },
+        watch:{
+            'route':function(){
+                document.body.scrollTop = 0
+            }
+        },
+        data: function(){
+            return {
+                categoryShowId:1,
+                cid: 2,
+                category: categoryList,
+                cases: caseList,
+                qdlist: {
+                    '百度SEM': 'assets/images/case_detail_02.png',
+                    '百度搜索': 'assets/images/case_detail_02.png',
+                    '百度品专': 'assets/images/case_detail_02.png',
+                    '百度无线': 'assets/images/case_detail_02.png',
+                    '百度': 'assets/images/case_detail_02.png',
+                    '搜狗': 'assets/images/case_detail_03.png',
+                    '神马': 'assets/images/case_detail_04.png',
+                    '今日头条': 'assets/images/case_detail_02/qd_02.png',
+                    '广点通': 'assets/images/case_detail_02/qd_03.png',
+                    'UC头条': 'assets/images/case_detail_02/qd_04.png',
+                    '360': 'assets/images/case_detail_02/qd_01.png',
+                }
+            }
+        },
+        computed: {
+            showcategory:function(){
+                return this.category[this.getCid]
+            },
+            getCid:function(){
+                return (this.$route.params.cid)?this.$route.params.cid:1
+            },
+            getCase:function(){
+                for(var i=0;i<this.cases.length;i++) {
+                    if(this.cases[i]['id'] == this.$route.params.id) {
+                        return this.cases[i]
+                        break
+                    }
+                }
+            },
+            moreCase: function() {
+                var count = 0
+                var r = []
+                for(var i=0; i<this.cases.length; i++) {
+                    if( (this.cases[i]['cid'] == this.getCase['cid']) && count < 4) {
+                        r.push(this.cases[i])
+                        count++
+                    }
+                }
+                return r
+            }
+        },
+        created: function(){
+
+        },
+        mounted: function(){
+            $(".top-nav").addClass('top-nav-black')
+            document.title = this.getCase.name + ' 破峰 案例'
+        },
+        methods: {
+            getQd:function(value){
+                var qd = {
+                    '百度': 'assets/images/case_detail_02.png',
+                    '搜狗': 'assets/images/case_detail_02.png',
+                    '神马': 'assets/images/case_detail_02.png',
+                }
+                var toArray = value.split('、')
+                var r = []
+                for(var i=0; i<toArray.length; i++) {
+                    r.push(qd[ toArray[i] ])
+                }
+                return r
+            },
+
+            getWithCid:function(id){
+                var r = []
+                for(var i=0; i<this.cases.length; i++) {
+                    if(this.cases[i]['cid'] == id) {
+                        r.push(this.cases[i])
+                    }
+                }
+                return r
+            }
+
+        }
+    }
+
+    var routes = [
+        { path: '/:cid?', name:'category', component: categoryPage },
+        { path: '/show/:id', name:'detail', component: detailPage}
+//    { path: '/bar', component: Bar }
+    ]
+
+    var router = new VueRouter({
+        routes: routes
+    })
+
+    var app  = new Vue({
+        router: router,
+        data: function(){
+            return {
+                category: categoryList
+            }
+        },
+    }).$mount('#app')
+
+
+
+
+</script>
+
+
+
+<script src="assets/scripts/jquery.easing.min.js"></script>
+<script src="assets/scripts/swiper.min.js"></script>
+<script src="assets/scripts/New.js"></script>
+<!--<script src="assets/scripts/respond.min.js"></script>-->
+<script src="assets/scripts/jquery.scrollify.min.js"></script>
+<script src="assets/scripts/anime.min.js"></script>
+<script src="assets/scripts/service.js"></script>
+
+
+</body>
+
+</html>

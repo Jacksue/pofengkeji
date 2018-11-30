@@ -1,0 +1,85 @@
+.news-main {
+    padding: 0 80px;
+}
+.news-title {
+    text-align: center;
+    margin-top: 83px;
+    margin-bottom: 62px;
+}
+.news-title h1 {
+    font-size: 26px;
+    color:#000000;
+    margin-bottom: 18px;
+}
+.news-title .news-time {
+    font-size: 26px;
+    color:#bebebe;
+}
+.news-desc p {
+    font-size: 18px;
+    color:#555555;
+    line-height: 40px;
+    margin-bottom: 59px;
+    text-indent: 36px;
+}
+.news-desc p:first-child {
+    text-indent: 0;
+}
+.news-sidebar {
+    text-align: center;
+}
+.news-sidebar ul {
+    display: inline-block;
+    margin: 0 auto;
+}
+.news-sidebar ul li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+.news-sidebar ul li.selected a {
+    border-bottom: 3px solid #007aff;
+}
+.news-sidebar ul li a {
+    padding: 10px 20px;
+    transition: all 0.3s;
+    border-bottom: 3px solid #fff;
+}
+.news-sidebar ul li a:hover {
+
+    border-bottom: 3px solid #007aff;
+}
+.news-sidebar ul li:hover a {
+    transform: translate3d(10px,0,0);
+}
+.newslist ul li {
+    border-radius: 3px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    margin-bottom:10px;
+    transition: all 0.3s;
+}
+.newslist ul li span {
+    float: right;
+}
+.newslist ul li:hover {
+    transform: translate3d(5px,0,0);
+    background-color: #ededed;
+}
+.fenye {
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+.fenye .PageInfo {
+    color:#afafaf;
+}
+.newslist1 h4 {
+    margin-bottom: 10px;
+}
+.newslist1 ul li {
+    border-bottom: dashed #cccccc 1px;
+    margin-bottom: 10px;
+}
+.newslist1 ul li span {
+    float: right;
+}
